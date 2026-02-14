@@ -1,7 +1,6 @@
 ancho = 10
 alto = 10
 
-# Posición inicial
 serpiente = [[5, 5], [4, 5], [3, 5]]
 direccion = "s"
 comida = [7, 2]
@@ -31,7 +30,6 @@ while True:
 
     cabeza = serpiente[0][:]
 
-    # Movimiento
     if direccion == "w":
         nueva = [cabeza[0] - 1, cabeza[1]]
     elif direccion == "s":
@@ -41,7 +39,6 @@ while True:
     elif direccion == "d":
         nueva = [cabeza[0], cabeza[1] + 1]
 
-    # Verificar que no salga del tablero
     if 0 <= nueva[0] < alto and 0 <= nueva[1] < ancho:
         serpiente.insert(0, nueva)
         serpiente.pop()
